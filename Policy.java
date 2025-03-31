@@ -6,8 +6,8 @@ public class Policy
    private String lastName;
    private int age;
    private String smokingStatus;
-   private int height;
-   private int weight;
+   private double height;
+   private double weight;
    
    public Policy()
    {
@@ -22,7 +22,7 @@ public class Policy
       
    }
    
-   public Policy(int number, String name, String fName, String lName, int holderAge, String status, int heightInches, int weightPounds)
+   public Policy(int number, String name, String fName, String lName, int holderAge, String status, double heightInches, double weightPounds)
    {
       policyNumber = number;
       providerName = name;
@@ -31,7 +31,7 @@ public class Policy
       age = holderAge;
       smokingStatus = status;
       height = heightInches;
-      weight = WeightPounds;
+      weight = weightPounds;
    }
    
    public int getPolicyNumber()
@@ -64,12 +64,12 @@ public class Policy
       return smokingStatus;
    }
    
-   public int getHeight()
+   public double getHeight()
    {
       return height;
    }
    
-   public int getWeight()
+   public double getWeight()
    {
       return weight;
    }
@@ -132,7 +132,7 @@ public class Policy
       }
       if (getBMI() > 35)
       {
-         total += (getBMI() - 35)^20;
+         total += (getBMI() - 35.0)*20.0;
       }
       
       return total;
