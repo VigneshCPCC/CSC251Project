@@ -62,6 +62,8 @@ public class Project_Vignesh_Rajesh
          System.out.println();
        }
          file.close();
+         System.out.println("The number of policies with a smoker is: " + smokers);
+         System.out.println("The number of policies with a non-smoker is: " + nonSmokers);
          
       
       
