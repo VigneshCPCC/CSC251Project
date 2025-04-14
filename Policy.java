@@ -33,91 +33,184 @@ public class Policy
       height = heightInches;
       weight = weightPounds;
    }
+   /**
+      The getPolicyNumber method displays the policy number.
+      @return the policy number
+   
+   */
    
    public int getPolicyNumber()
    {
       return policyNumber;
    }
+   /**
+      The getProviderName method displays the provider's name.
+      @return the provider's name.
+   
+   */
    
    public String getProviderName()
    {
       return providerName;
    }
+   /**
+      The getFirstName method displays the first name.
+      @return the first name.
+   
+   */
    
    public String getFirstName()
    {
       return firstName;
    }
+   /**
+      The getLastName method displays the last name.
+      @return the last name.
+   
+   */
    
    public String getLastName()
    {
       return lastName;
    }
+   /**
+      The getAge method displays the age.
+      @return the age.
+   
+   */
    
    public int getAge()
    {
       return age;
    }
    
+   /**
+      The getSmokingStatus method displays the smoking status.
+      @return the smoking status.
+   
+   */
+   
    public String getSmokingStatus()
    {
       return smokingStatus;
    }
+   /**
+      The getHeight method displays the height.
+      @return the height.
+   
+   */
    
    public double getHeight()
    {
       return height;
    }
+   /**
+      The getWeight method displays the weight.
+      @return the weight.
+   
+   */
    
    public double getWeight()
    {
       return weight;
    }
+   /**
+      The setPolicyNumber method sets policy number.
+      @param policy The policy number.
+   
+   */
    
    public void setPolicyNumber(int policy)
    {
       policyNumber = policy;
    }
+   /**
+      The getProviderName method sets provider name.
+      @param name The provider name.
    
-   public void getProviderName(String name)
+   */
+   public void setProviderName(String name)
    {
       providerName = name;
    }
+   /**
+      The setFirstName method sets first name.
+      @param name The first name.
    
-   public void getFirstName(String name)
+   */
+   
+   public void setFirstName(String name)
    {
       firstName = name;
    }
+   /**
+      The setLastName method sets last name.
+      @param name The last name.
    
-   public void getLastName(String name)
+   */
+   
+   public void setLastName(String name)
    {
       lastName = name;
    }
    
-   public void getAge(int holderAge)
+   /**
+      The setAge method sets age.
+      @param holderAge the person's age.
+   
+   */
+   
+   public void setAge(int holderAge)
    {
       age = holderAge;
    }
    
-   public void getSmokingStatus(String status)
+   /**
+      The setSmokingStatus method sets the smoking status.
+      @param status The smoking status.
+   
+   */
+   
+   public void setSmokingStatus(String status)
    {
       smokingStatus = status;
+      
    }
+   /**
+      The setHeight method sets height.
+      @param holderHeight The holder's height.
    
-   public void getHeight(int holderHeight)
+   */
+   
+   public void setHeight(int holderHeight)
    {
       height = holderHeight;
    }
+   /**
+      The setWeight method sets weight.
+      @param holderWeight The holder's weight.
    
-   public void getWeight(int holderWeight)
+   */
+   
+   public void setWeight(int holderWeight)
    {
       weight = holderWeight;
    }
+   /**
+      The getBMI method returns the weight multiplied by 703 and divided by the height squared.
+      @return The holder's BMI.
+   
+   */
    
    public double getBMI()
    {
       return ((weight*703)/(height*height));
    }
+   /**
+      The getReturnPrice method returns the total with added expenses based on age, smoking status and BMI.
+      @return The holder's return price.
+   
+   */
    
    public double getReturnPrice()
    {
