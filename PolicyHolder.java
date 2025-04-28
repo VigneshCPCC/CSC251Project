@@ -17,6 +17,26 @@ public class PolicyHolder
       weight = weightPounds;
    }
    
+   public PolicyHolder()
+   {
+      firstName = "";
+      lastName = "";
+      age = 0;
+      smokingStatus = "";
+      height = 0;
+      weight = 0;
+   }
+   
+   public PolicyHolder(PolicyHolder person2)
+   {
+      firstName = person2.firstName;
+      lastName = person2.lastName;
+      age = person2.age;
+      smokingStatus = person2.smokingStatus;
+      height = person2.height;
+      weight = person2.weight;
+   }
+   
    
    
    /**
@@ -175,15 +195,9 @@ public class PolicyHolder
     
     public String toString()
     {
-      if (smokingStatus.equals("false"))
-      {
-         return "The name of Policy Holder is "+firstName+" "+lastName+". They are "+age+" old, and they do not smoke. "
-               +"They are "+height+" inches, and they weight "+weight+" pounds.";
-      }
-      return "The name of Policy Holder is "+firstName+" "+lastName+". They are "+age+" old, and they do smoke. "
-               +"They are "+height+" inches, and they weight "+weight+" pounds.";
-
+      return "Policyholder’s First Name: "+firstName+"\nPolicyholder’s Last Name: "+lastName
+      +"\nPolicyholder's Age: "+age+"\nPolicyholder’s Smoking Status:"+smokingStatus
+      +"\nPolicyholder's Height: "+height+"\nPolicyholder's Weight: "+weight+
+      "\nPolicyholder's BMI: "+getBMI()+"\nPolicy Price: "+getReturnPrice()+"\n";
     }
-
 }
-   
