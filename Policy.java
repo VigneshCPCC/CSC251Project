@@ -2,12 +2,14 @@ public class Policy
 {
    private int policyNumber;
    private String providerName;
+   private static int counter = 0;
    
    
    public Policy()
    {
       policyNumber = 0;
       providerName = null;
+      counter++;
       
    }
    
@@ -15,6 +17,7 @@ public class Policy
    {
       policyNumber = number;
       providerName = name;
+      counter++;
       
    }
    /**
