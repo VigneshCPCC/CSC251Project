@@ -172,6 +172,18 @@ public class PolicyHolder
       
       return total;
     }
+    
+    public String toString()
+    {
+      if (smokingStatus.equals("false"))
+      {
+         return "The name of Policy Holder is "+firstName+" "+lastName+". They are "+age+" old, and they do not smoke. "
+               +"They are "+height+" inches, and they weight "+weight+" pounds.";
+      }
+      return "The name of Policy Holder is "+firstName+" "+lastName+". They are "+age+" old, and they do smoke. "
+               +"They are "+height+" inches, and they weight "+weight+" pounds.";
+
+    }
 
 }
    
