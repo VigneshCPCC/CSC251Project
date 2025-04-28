@@ -57,11 +57,11 @@ public class Policy
    {
       providerName = name;
    }
-   /**
-      The setFirstName method sets first name.
-      @param name The first name.
    
-   */
+   public String toString()
+   {
+      return "The policy number is "+policyNumber+", and the provider name is "+providerName+".";
+   }
    
    
    
