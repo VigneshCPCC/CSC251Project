@@ -3,21 +3,24 @@ public class Policy
    private int policyNumber;
    private String providerName;
    private static int counter = 0;
+   private PolicyHolder person;
    
    
    public Policy()
    {
       policyNumber = 0;
-      providerName = null;
+      providerName = "";
       counter++;
+      person = new PolicyHolder();
       
    }
    
-   public Policy(int number, String name)
+   public Policy(int number, String name, PolicyHolder person)
    {
       policyNumber = number;
       providerName = name;
       counter++;
+      this.person = new PolicyHolder(person);
       
    }
    /**
@@ -41,6 +44,15 @@ public class Policy
       return providerName;
    }
    
+   public PolicyHolder getPolicyHolder()
+   {
+      return new PolicyHolder(person);
+   }
+   
+   public static int getCounter()
+   {
+      return counter;
+   }
    /**
       The setPolicyNumber method sets policy number.
       @param policy The policy number.
@@ -63,12 +75,11 @@ public class Policy
    
    public String toString()
    {
-      return "The policy number is "+policyNumber+", and the provider name is "+providerName+".";
+      return "\nPolicy Number: "+policyNumber+"\nProvider Name: "+providerName+"\n"+person;
    }
    
-   
-   
-   
+  
+         
    
    
 }
