@@ -45,23 +45,13 @@ public class Project_Vignesh_Rajesh
          
          weight = file.nextDouble();
          
-         Policy insurance = new Policy(policyNumber, providerName, firstName, lastName, age, smokingStatus, height, weight);
+         Policy insurance = new Policy(policyNumber, providerName, new PolicyHolder(firstName, lastName, age, smokingStatus, height, weight));
          
-         System.out.println("Policy Number: "+insurance.getPolicyNumber());
-         System.out.println("Provider Name: "+insurance.getProviderName());
-         System.out.println("Policyholder’s First Name: "+insurance.getFirstName());
-         System.out.println("Policyholder’s Last Name: "+insurance.getLastName());
-         System.out.println("Policyholder's Age: "+insurance.getAge());
-         System.out.println("Policyholder’s Smoking Status:: "+insurance.getSmokingStatus());
-         System.out.println("Policyholder's Height: "+insurance.getHeight());
-         System.out.println("Policyholder's Weight: "+insurance.getWeight());
-         
-         System.out.println("Policyholder's BMI: "+insurance.getBMI());
-         
-         System.out.println("Policy Price: "+insurance.getReturnPrice());
+         System.out.print(insurance);
          System.out.println();
        }
          file.close();
+         System.out.println("There were "+Policy.getCounter()+" Policy objects created.");
          System.out.println("The number of policies with a smoker is: " + smokers);
          System.out.println("The number of policies with a non-smoker is: " + nonSmokers);
          
